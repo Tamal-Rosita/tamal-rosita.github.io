@@ -137,10 +137,30 @@ body {
   to   { transform: scale(1);   opacity: 1; }
 }
 
-/* ── Chayanne frame ── */
-.frame-wrap {
+/* ── Gallery & Frames ── */
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.5rem, 3vw, 3rem);
   position: relative;
   z-index: 3;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.frame-link {
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.frame-link:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.frame-wrap {
+  position: relative;
 }
 
 .frame {
@@ -162,6 +182,38 @@ body {
   object-fit: cover;
   image-rendering: pixelated;
 }
+
+.frame-game .poster {
+  width: clamp(60px, 11vw, 150px);
+  height: clamp(80px, 15vw, 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5rem;
+  background: #1a0a2e;
+  border: 2px solid #4a1a7a;
+}
+
+.poster span {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(0.35rem, 0.9vw, 0.8rem);
+  color: #fff;
+  line-height: 1.5;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.poster-naia {
+  background: linear-gradient(135deg, #1f4068, #1b1b2f);
+  border-color: #e43f5a;
+}
+.poster-naia span { color: #e43f5a; }
+
+.poster-boturini {
+  background: linear-gradient(135deg, #a67c00, #bf953f);
+  border-color: #fcf6ba;
+}
+.poster-boturini span { color: #fcf6ba; text-shadow: 2px 2px 0 #333; }
 
 /* ══════════════════════════════════════════════
    FLOOR — lower 35% of the room
@@ -255,6 +307,48 @@ body {
   font-size: clamp(0.35rem, 1vw, 0.6rem);
   color: #1a1040;
   letter-spacing: 0.1em;
+}
+
+/* ── Social Links & Buttons ── */
+.social-links {
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+  margin-top: clamp(1rem, 3vh, 2rem);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.retro-btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(0.4rem, 1.2vw, 0.7rem);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  background: #3a2060;
+  border: 3px solid #1a1040;
+  box-shadow: 
+    inset 2px 2px 0 #5c358f,
+    inset -2px -2px 0 #1a1040,
+    4px 4px 0 rgba(0,0,0,0.2);
+  transition: all 0.1s;
+  text-transform: uppercase;
+}
+
+.retro-btn:hover {
+  background: #4a287a;
+  transform: translate(-2px, -2px);
+  box-shadow: 
+    inset 2px 2px 0 #7b4ebc,
+    inset -2px -2px 0 #1a1040,
+    6px 6px 0 rgba(0,0,0,0.2);
+}
+
+.retro-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 
+    inset 2px 2px 0 #1a1040,
+    inset -2px -2px 0 #5c358f,
+    0px 0px 0 rgba(0,0,0,0.2);
 }
 
 /* ══════════════════════════════════════════════
