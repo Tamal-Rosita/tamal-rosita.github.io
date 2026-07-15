@@ -3,11 +3,11 @@
   'use strict';
 
   // ── Progress bar animate on load ─────────────────────────────────────────
-  const progressBar   = document.getElementById('progressBar');
+  const progressBar = document.getElementById('progressBar');
   const progressLabel = document.getElementById('progressLabel');
 
   if (progressBar) {
-    setTimeout(() => { progressBar.style.width = '45%'; }, 400);
+    setTimeout(() => { progressBar.style.width = '25%'; }, 400);
   }
 
   if (progressLabel) {
