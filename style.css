@@ -275,70 +275,87 @@ body {
   image-rendering: pixelated;
 }
 
-.frame-game .poster {
-  width: clamp(80px, 15vw, 180px);
-  height: clamp(100px, 18vw, 220px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0.5rem;
-  background: #c3c7c7;
-  border: 3px solid #737373;
-  border-radius: 6px 6px 0 0;
+.frame-game {
+  width: clamp(90px, 15vw, 170px);
+  height: clamp(110px, 18vw, 200px);
   position: relative;
-  box-shadow: inset -3px -3px 0 #9ca0a0, inset 3px 3px 0 #e4e8e8;
+  filter: drop-shadow(4px 4px 0 rgba(0,0,0,0.5));
 }
 
-.frame-game .poster::before {
+.cartridge {
+  width: 100%;
+  height: 100%;
+  background: #a9a9a9;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  border: 2px solid #5a5a5a;
+  box-shadow: 
+    inset -3px -3px 0px rgba(0,0,0,0.2), 
+    inset 3px 3px 0px rgba(255,255,255,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartridge::before, .cartridge::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 10%;
-  right: 10%;
-  height: 10%;
-  background: #a9adad;
-  border-radius: 0 0 5px 5px;
-  box-shadow: inset 0 2px 0 #737373;
+  top: 15px;
+  width: 8px;
+  height: 30px;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 4px,
+    #5a5a5a 4px,
+    #5a5a5a 6px
+  );
+}
+.cartridge::before { left: -2px; }
+.cartridge::after { right: -2px; }
+
+.cartridge-top {
+  width: 75%;
+  height: 15%;
+  margin-top: 10%;
+  background: #9a9a9a;
+  border-radius: 12px;
+  box-shadow: inset 1px 2px 4px rgba(0,0,0,0.4);
 }
 
 .cartridge-sticker {
-  width: 85%;
-  height: 60%;
-  margin-top: 15%;
+  width: 80%;
+  height: 55%;
+  margin-top: 8%;
+  background: #111;
+  border-radius: 4px;
+  border: 2px solid #5a5a5a;
+  box-shadow: inset 0px 0px 4px rgba(0,0,0,0.8);
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #1a0a2e;
-  border: 2px solid #000;
-  border-radius: 2px;
 }
 
-.poster span {
-  font-family: 'Press Start 2P', monospace;
-  font-size: clamp(0.5rem, 1.2vw, 0.9rem);
-  color: #fff;
-  line-height: 1.5;
-  text-shadow: 2px 2px 0 #000;
+.cartridge-sticker::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0; 
+  height: 0; 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #888;
 }
 
-.poster-naia .cartridge-sticker {
-  background: linear-gradient(135deg, #1f4068, #1b1b2f);
-  border-color: #e43f5a;
-}
-
-.poster-naia span {
-  color: #e43f5a;
-}
-
-.poster-boturini .cartridge-sticker {
-  background: linear-gradient(135deg, #a67c00, #bf953f);
-  border-color: #fcf6ba;
-}
-
-.poster-boturini span {
-  color: #fcf6ba;
-  text-shadow: 2px 2px 0 #333;
+.cartridge-sticker img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
 }
 
 /* ══════════════════════════════════════════════
