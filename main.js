@@ -19,4 +19,12 @@
     }, 2500);
   }
 
+  // ── Light / Dark Mode Toggle (Disco) ─────────────────────────────────────
+  const lamps = document.querySelectorAll('.lamp');
+  lamps.forEach(lamp => {
+    lamp.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  });
+
 })();
