@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tamal Rosita – Coming Soon</title>
+  <meta name="description" content="Tamal Rosita is under construction. We're hard at work – check back soon!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="room" id="room">
+
+    <!-- ── Wall ── -->
+    <section class="wall">
+
+      <!-- Hanging lamps -->
+      <div class="lamp lamp-left" aria-hidden="true">
+        <div class="lamp-cord"></div>
+        <div class="lamp-shade"></div>
+        <div class="lamp-bulb"></div>
+      </div>
+      <div class="lamp lamp-right" aria-hidden="true">
+        <div class="lamp-cord"></div>
+        <div class="lamp-shade"></div>
+        <div class="lamp-bulb"></div>
+      </div>
+
+      <!-- Title -->
+      <header class="title-block" role="banner">
+        <h1 class="site-title">TAMAL<br>ROSITA</h1>
+      </header>
+
+      <!-- Chayanne frame -->
+      <div class="frame-wrap">
+        <div class="frame" aria-label="Chayanne portrait">
+          <img src="chayanne.png" alt="Chayanne" />
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── Floor ── -->
+    <section class="floor">
+      <div class="floor-tiles" aria-hidden="true"></div>
+
+      <div class="floor-content">
+        <h2 class="wip-title">SITE UNDER CONSTRUCTION</h2>
+        <p class="wip-subtitle">We're hard at work, check back soon!</p>
+
+        <div class="progress-wrap" role="progressbar" aria-label="Build progress" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-track">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+          <span class="progress-label" id="progressLabel">Building...</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="scanlines" aria-hidden="true"></div>
+  <script src="main.js"></script>
+</body>
+</html>
