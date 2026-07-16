@@ -31,6 +31,10 @@ body {
   --btn-shadow-light: #5c358f;
   --btn-shadow-light-hover: #7b4ebc;
   --disco-opacity: 0;
+  --title-g1: #c98aaa;
+  --title-g2: #a185cb;
+  --title-g3: #9c70bb;
+  --title-g4: #c98aaa;
 }
 
 body.dark-mode {
@@ -48,6 +52,10 @@ body.dark-mode {
   --btn-shadow-light: #fff;
   --btn-shadow-light-hover: #fff;
   --disco-opacity: 1;
+  --title-g1: #f8f4c3;
+  --title-g2: #edcdd9;
+  --title-g3: #c8dce8;
+  --title-g4: #bfe8d3;
 }
 
 body {
@@ -205,16 +213,41 @@ body {
 }
 
 .site-title {
-  font-family: 'Press Start 2P', monospace;
-  font-size: clamp(2.2rem, 9vw, 7rem);
-  line-height: 1.25;
-  color: #fff;
-  letter-spacing: 0.08em;
-  text-shadow:
-    4px 4px 0 #7b2fa0,
-    8px 8px 0 #4a1a7a,
-    12px 12px 0 rgba(0, 0, 0, 0.35);
+  font-family: 'VT323', monospace;
+  font-size: clamp(4rem, 15vw, 9rem);
+  line-height: 0.65;
+  letter-spacing: -0.085em;
+  font-weight: bold;
+  -webkit-text-stroke: 1px var(--text-subtitle);
+
+  /* rainbowish pastel gradient related to global scene */
+  background: linear-gradient(to bottom,
+      var(--title-g1) 0%,
+      var(--title-g2) 30%,
+      var(--title-g3) 65%,
+      var(--title-g4) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  filter: drop-shadow(4px 4px 0 var(--text-title)) drop-shadow(8px 8px 0 rgba(0, 0, 0, 0.5));
+
+  position: relative;
+  display: inline-block;
   animation: titlePop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  padding-bottom: 0.1em;
+}
+
+.site-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: clamp(4px, 0.6vw, 10px);
+  background: linear-gradient(90deg, var(--title-g4), var(--title-g3), var(--title-g2), var(--title-g3), var(--title-g4));
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 var(--text-title);
 }
 
 @keyframes titlePop {
@@ -276,10 +309,10 @@ body {
 }
 
 .frame-game {
-  width: clamp(90px, 15vw, 170px);
-  height: clamp(110px, 18vw, 200px);
+  width: clamp(110px, 18.7vw, 204px);
+  height: clamp(140px, 23.8vw, 255px);
   position: relative;
-  filter: drop-shadow(4px 4px 0 rgba(0,0,0,0.5));
+  filter: drop-shadow(4px 4px 0 rgba(0, 0, 0, 0.5));
 }
 
 .cartridge {
@@ -289,30 +322,35 @@ body {
   border-radius: 8px 8px 0 0;
   position: relative;
   border: 2px solid #5a5a5a;
-  box-shadow: 
-    inset -3px -3px 0px rgba(0,0,0,0.2), 
-    inset 3px 3px 0px rgba(255,255,255,0.4);
+  box-shadow:
+    inset -3px -3px 0px rgba(0, 0, 0, 0.2),
+    inset 3px 3px 0px rgba(255, 255, 255, 0.4);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.cartridge::before, .cartridge::after {
+.cartridge::before,
+.cartridge::after {
   content: '';
   position: absolute;
   top: 15px;
   width: 8px;
   height: 30px;
-  background: repeating-linear-gradient(
-    to bottom,
-    transparent 0,
-    transparent 4px,
-    #5a5a5a 4px,
-    #5a5a5a 6px
-  );
+  background: repeating-linear-gradient(to bottom,
+      transparent 0,
+      transparent 4px,
+      #5a5a5a 4px,
+      #5a5a5a 6px);
 }
-.cartridge::before { left: -2px; }
-.cartridge::after { right: -2px; }
+
+.cartridge::before {
+  left: -2px;
+}
+
+.cartridge::after {
+  right: -2px;
+}
 
 .cartridge-top {
   width: 75%;
@@ -320,7 +358,7 @@ body {
   margin-top: 10%;
   background: #9a9a9a;
   border-radius: 12px;
-  box-shadow: inset 1px 2px 4px rgba(0,0,0,0.4);
+  box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .cartridge-sticker {
@@ -330,7 +368,7 @@ body {
   background: #111;
   border-radius: 4px;
   border: 2px solid #5a5a5a;
-  box-shadow: inset 0px 0px 4px rgba(0,0,0,0.8);
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.8);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -344,8 +382,8 @@ body {
   bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-top: 10px solid #888;
@@ -517,6 +555,26 @@ body {
   .social-links {
     flex-direction: column;
     align-items: center;
+    display: flex;
+  }
+
+  /* Make Chayanne go to the bottom of the stack */
+  .main-frame {
+    order: 3;
+  }
+
+  .frame img {
+    width: 44vw;
+    height: 44vw;
+  }
+
+  .frame-link {
+    order: 1;
+  }
+
+  .frame-game {
+    width: 50vw;
+    height: 56vw;
   }
 
   .room {
@@ -538,7 +596,7 @@ body {
 
   /* On very small screens, scale title down more aggressively */
   .site-title {
-    font-size: clamp(2.5rem, 12vw, 3.5rem);
+    font-size: clamp(5rem, 12vw, 9rem);
   }
 
   .wip-title {
@@ -565,4 +623,16 @@ body {
   .lamp {
     display: none;
   }
+}
+
+.site-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  font-family: 'VT323', monospace;
+  color: var(--text-subtitle);
+  font-size: 1.2rem;
+  z-index: 2;
 }

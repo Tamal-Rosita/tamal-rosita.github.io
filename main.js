@@ -27,4 +27,10 @@
     });
   });
 
+  // ── Footer Date ──────────────────────────────────────────────────────────
+  const yearElem = document.getElementById('currentYear');
+  if (yearElem) {
+    yearElem.textContent = new Date().getFullYear();
+  }
+
 })();
