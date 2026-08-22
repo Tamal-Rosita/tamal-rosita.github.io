@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+<div class="room proyect-room">
+
+  <!-- ── Wall ── -->
+  <section class="wall proyect-wall">
+
+    <!-- Hanging lamps -->
+    <div class="lamp lamp-left" aria-hidden="true">
+      <div class="lamp-cord"></div>
+      <div class="lamp-shade"></div>
+      <div class="lamp-bulb"></div>
+    </div>
+    <div class="lamp lamp-right" aria-hidden="true">
+      <div class="lamp-cord"></div>
+      <div class="lamp-shade"></div>
+      <div class="lamp-bulb"></div>
+    </div>
+
+    <!-- Project Hero -->
+    <div class="proyect-hero">
+      <div class="proyect-cover-wrap">
+        <div class="frame-game proyect-cover-frame" aria-label="{{ page.title }} Cover Art">
+          <div class="cartridge">
+            <div class="cartridge-top"></div>
+            <div class="cartridge-sticker">
+              <img src="{{ page.cover | relative_url }}" alt="{{ page.title }} Cover Art" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proyect-info">
+        <h1 class="proyect-title">{{ page.title }}</h1>
+        {% if page.tagline %}
+        <p class="proyect-tagline">{{ page.tagline }}</p>
+        {% endif %}
+        {% if page.link %}
+        <a href="{{ page.link }}" target="_blank" rel="noopener noreferrer" class="retro-btn proyect-play-btn">
+          Play on itch.io
+        </a>
+        {% endif %}
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── Floor ── -->
+  <section class="floor proyect-floor">
+    <div class="floor-tiles" aria-hidden="true"></div>
+
+    <div class="floor-content proyect-content">
+      <div class="proyect-description">
+        {{ content }}
+      </div>
+
+      {% if page.screenshots %}
+      <div class="proyect-screenshots">
+        <h2 class="wip-title">Screenshots</h2>
+        <div class="screenshots-grid">
+          {% for screenshot in page.screenshots %}
+          <div class="screenshot-frame">
+            <img src="{{ screenshot | relative_url }}" alt="{{ page.title }} screenshot" />
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      <div class="social-links">
+        <a href="{{ '/proyects' | relative_url }}" class="retro-btn">&larr; All Proyects</a>
+        {% if page.link %}
+        <a href="{{ page.link }}" target="_blank" rel="noopener noreferrer" class="retro-btn">Play on itch.io</a>
+        {% endif %}
+      </div>
+    </div>
+
+    {% include footer.html %}
+  </section>
+
+</div>

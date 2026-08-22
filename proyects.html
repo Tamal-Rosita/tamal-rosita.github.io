@@ -1,0 +1,73 @@
+---
+layout: default
+title: Proyects
+description: "Explore the games and projects crafted by Tamal Rosita — indie pixel-art adventures."
+permalink: /proyects
+---
+
+<div class="room proyects-room" id="room">
+
+  <!-- ── Wall ── -->
+  <section class="wall proyects-wall">
+
+    <!-- Hanging lamps -->
+    <div class="lamp lamp-left" aria-hidden="true">
+      <div class="lamp-cord"></div>
+      <div class="lamp-shade"></div>
+      <div class="lamp-bulb"></div>
+    </div>
+    <div class="lamp lamp-right" aria-hidden="true">
+      <div class="lamp-cord"></div>
+      <div class="lamp-shade"></div>
+      <div class="lamp-bulb"></div>
+    </div>
+
+    <!-- Title -->
+    <header class="title-block" role="banner">
+      <h1 class="site-title">Our<br>Games</h1>
+    </header>
+
+  </section>
+
+  <!-- ── Floor ── -->
+  <section class="floor proyects-floor">
+    <div class="floor-tiles" aria-hidden="true"></div>
+
+    <div class="floor-content proyects-content">
+
+      <h2 class="wip-title">Game Collection</h2>
+      <p class="wip-subtitle">Click a cartridge to learn more!</p>
+
+      <div class="proyects-grid">
+        {% for proyect in site.proyects %}
+        <a href="{{ proyect.url | relative_url }}" class="proyect-card-link">
+          <div class="proyect-card">
+            <div class="frame-game" aria-label="{{ proyect.title }}">
+              <div class="cartridge">
+                <div class="cartridge-top"></div>
+                <div class="cartridge-sticker">
+                  <img src="{{ proyect.cover | relative_url }}" alt="{{ proyect.title }} Cover Art" />
+                </div>
+              </div>
+            </div>
+            <div class="proyect-card-info">
+              <h3 class="proyect-card-title">{{ proyect.title }}</h3>
+              <p class="proyect-card-desc">{{ proyect.description }}</p>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+
+      <div class="social-links">
+        <a href="https://tamalrosita.itch.io" target="_blank" rel="noopener noreferrer" class="retro-btn">
+          All Games on itch.io
+        </a>
+      </div>
+
+    </div>
+
+    {% include footer.html %}
+  </section>
+
+</div>

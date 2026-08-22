@@ -1,111 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: Tamal Rosita
+description: "Tamal Rosita — indie game studio. We're hard at work, check back soon!"
+---
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tamal Rosita – Coming Soon</title>
-  <meta name="description" content="Tamal Rosita is under construction. We're hard at work – check back soon!" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
+<div class="room" id="room">
 
-<body>
+  <!-- ── Wall ── -->
+  <section class="wall">
 
-  <div class="room" id="room">
+    <!-- Hanging lamps -->
+    <div class="lamp lamp-left" aria-hidden="true">
+      <div class="lamp-cord"></div>
+      <div class="lamp-shade"></div>
+      <div class="lamp-bulb"></div>
+    </div>
+    <div class="lamp lamp-right" aria-hidden="true">
+      <div class="lamp-cord"></div>
+      <div class="lamp-shade"></div>
+      <div class="lamp-bulb"></div>
+    </div>
 
-    <!-- ── Wall ── -->
-    <section class="wall">
+    <!-- Title -->
+    <header class="title-block" role="banner">
+      <h1 class="site-title">Tamal<br>Rosita</h1>
+    </header>
 
-      <!-- Hanging lamps -->
-      <div class="lamp lamp-left" aria-hidden="true">
-        <div class="lamp-cord"></div>
-        <div class="lamp-shade"></div>
-        <div class="lamp-bulb"></div>
-      </div>
-      <div class="lamp lamp-right" aria-hidden="true">
-        <div class="lamp-cord"></div>
-        <div class="lamp-shade"></div>
-        <div class="lamp-bulb"></div>
-      </div>
-
-      <!-- Title -->
-      <header class="title-block" role="banner">
-        <h1 class="site-title">Tamal<br>Rosita</h1>
-      </header>
-
-      <!-- Chayanne frame and Games -->
-      <div class="gallery">
-        <!-- NAIA Game Frame -->
-        <a href="https://tamalrosita.itch.io/naia" target="_blank" rel="noopener noreferrer" class="frame-link">
-          <div class="frame-game" aria-label="NAIA Game">
-            <div class="cartridge">
-              <div class="cartridge-top"></div>
-              <div class="cartridge-sticker">
-                <img src="assets/naia.png" alt="NAIA Cover Art" />
-              </div>
+    <!-- Chayanne frame and Games -->
+    <div class="gallery">
+      <!-- NAIA Game Frame -->
+      <a href="https://tamalrosita.itch.io/naia" target="_blank" rel="noopener noreferrer" class="frame-link">
+        <div class="frame-game" aria-label="NAIA Game">
+          <div class="cartridge">
+            <div class="cartridge-top"></div>
+            <div class="cartridge-sticker">
+              <img src="assets/naia.png" alt="NAIA Cover Art" />
             </div>
           </div>
-        </a>
-
-        <!-- Main Chayanne Frame -->
-        <div class="frame-wrap main-frame">
-          <div class="frame" aria-label="Chayanne portrait">
-            <img src="assets/chayanne.png" alt="Chayanne" />
-          </div>
         </div>
+      </a>
 
-        <!-- Boturini Game Frame -->
-        <a href="https://tamalrosita.itch.io/el-tesoro-de-boturini" target="_blank" rel="noopener noreferrer"
-          class="frame-link">
-          <div class="frame-game" aria-label="El Tesoro de Boturini Game">
-            <div class="cartridge">
-              <div class="cartridge-top"></div>
-              <div class="cartridge-sticker">
-                <img src="assets/boturini.png" alt="El Tesoro de Boturini Cover Art" />
-              </div>
+      <!-- Main Chayanne Frame -->
+      <div class="frame-wrap main-frame">
+        <div class="frame" aria-label="Chayanne portrait">
+          <img src="assets/chayanne.png" alt="Chayanne" />
+        </div>
+      </div>
+
+      <!-- Boturini Game Frame -->
+      <a href="https://tamalrosita.itch.io/el-tesoro-de-boturini" target="_blank" rel="noopener noreferrer"
+        class="frame-link">
+        <div class="frame-game" aria-label="El Tesoro de Boturini Game">
+          <div class="cartridge">
+            <div class="cartridge-top"></div>
+            <div class="cartridge-sticker">
+              <img src="assets/boturini.png" alt="El Tesoro de Boturini Cover Art" />
             </div>
           </div>
-        </a>
+        </div>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- ── Floor ── -->
+  <section class="floor">
+    <div class="floor-tiles" aria-hidden="true"></div>
+
+    <div class="floor-content">
+      <h2 class="wip-title">SITE UNDER CONSTRUCTION</h2>
+      <p class="wip-subtitle">We're hard at work, check back soon!</p>
+
+      <div class="progress-wrap" role="progressbar" aria-label="Build progress" aria-valuenow="45" aria-valuemin="0"
+        aria-valuemax="100">
+        <div class="progress-track">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <span class="progress-label" id="progressLabel">Building...</span>
       </div>
 
-    </section>
-
-    <!-- ── Floor ── -->
-    <section class="floor">
-      <div class="floor-tiles" aria-hidden="true"></div>
-
-      <div class="floor-content">
-        <h2 class="wip-title">SITE UNDER CONSTRUCTION</h2>
-        <p class="wip-subtitle">We're hard at work, check back soon!</p>
-
-        <div class="progress-wrap" role="progressbar" aria-label="Build progress" aria-valuenow="45" aria-valuemin="0"
-          aria-valuemax="100">
-          <div class="progress-track">
-            <div class="progress-bar" id="progressBar"></div>
-          </div>
-          <span class="progress-label" id="progressLabel">Building...</span>
-        </div>
-
-        <div class="social-links">
-          <a href="https://tamalrosita.itch.io" target="_blank" rel="noopener noreferrer" class="retro-btn">Our
-            itch.io</a>
-          <a href="https://oxido.dev" target="_blank" rel="noopener noreferrer" class="retro-btn">My Personal Site</a>
-        </div>
+      <div class="social-links">
+        <a href="https://tamalrosita.itch.io" target="_blank" rel="noopener noreferrer" class="retro-btn">Our
+          itch.io</a>
+        <a href="https://oxido.dev" target="_blank" rel="noopener noreferrer" class="retro-btn">My Personal Site</a>
       </div>
+    </div>
 
-      <footer class="site-footer">
-        <p>&copy; <span id="currentYear"></span> Tamal Rosita.</p>
-      </footer>
-    </section>
+    {% include footer.html %}
+  </section>
 
-  </div>
-
-  <div class="scanlines" aria-hidden="true"></div>
-  <script src="main.js"></script>
-</body>
-
-</html>
+</div>

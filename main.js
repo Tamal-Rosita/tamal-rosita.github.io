@@ -33,4 +33,32 @@
     yearElem.textContent = new Date().getFullYear();
   }
 
+  // ── Mobile Nav Toggle ────────────────────────────────────────────────────
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+
+  if (navToggle && mainNav) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close nav when a link is clicked (mobile)
+    const navLinks = mainNav.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close nav when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mainNav.contains(e.target)) {
+        mainNav.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
 })();

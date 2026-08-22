@@ -1,0 +1,20 @@
+title: Tamal Rosita
+description: "Tamal Rosita — indie game studio"
+url: "https://tamalrosita.com"
+baseurl: ""
+
+collections:
+  proyects:
+    output: true
+    permalink: /proyects/:slug/
+
+google_analytics: "G-JF510QX21V"
+
+# Exclude dev files from the built site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - docs/
+  - .editables/
+  - vendor/

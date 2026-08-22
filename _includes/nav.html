@@ -1,0 +1,28 @@
+<nav class="retro-nav" id="mainNav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="{{ '/' | relative_url }}" class="nav-logo" aria-label="Tamal Rosita Home">
+      <span class="nav-logo-text">TR</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li>
+        <a href="{{ '/' | relative_url }}"
+           class="nav-link{% if page.url == '/' %} nav-active{% endif %}">Home</a>
+      </li>
+      <li>
+        <a href="{{ '/about' | relative_url }}"
+           class="nav-link{% if page.url == '/about' or page.url == '/about.html' %} nav-active{% endif %}">About</a>
+      </li>
+      <li>
+        <a href="{{ '/proyects' | relative_url }}"
+           class="nav-link{% if page.url contains '/proyects' %} nav-active{% endif %}">Proyects</a>
+      </li>
+    </ul>
+  </div>
+</nav>
