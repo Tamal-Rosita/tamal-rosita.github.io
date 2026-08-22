@@ -1,0 +1,122 @@
+---
+layout: default
+title: Tamal Rosita
+description: "Tamal Rosita — indie game studio. We're hard at work, check back soon!"
+lang: es
+---
+
+{% assign i18n = site.data.i18n[page.lang] %}
+
+<div class="room" id="room">
+
+  <!-- ── Wall ── -->
+  <section class="wall">
+
+    <!-- Hanging lamps -->
+    <div class="lamp lamp-left" aria-hidden="true">
+      <div class="lamp-cord"></div>
+      <div class="lamp-shade"></div>
+      <div class="lamp-bulb"></div>
+    </div>
+    <div class="lamp lamp-right" aria-hidden="true">
+      <div class="lamp-cord"></div>
+      <div class="lamp-shade"></div>
+      <div class="lamp-bulb"></div>
+    </div>
+
+    <!-- Title -->
+    <header class="title-block" role="banner">
+      <h1 class="site-title">Tamal<br>Rosita</h1>
+    </header>
+
+    <!-- Chayanne frame and Games -->
+    <div class="gallery">
+      <!-- NAIA Game Frame -->
+      <a href="{{ '/es/projects/naia/' | relative_url }}" class="frame-link">
+        <div class="frame-game" aria-label="NAIA Game">
+          <div class="cartridge">
+            <div class="cartridge-top"></div>
+            <div class="cartridge-sticker">
+              <img src="{{ '/assets/naia.png' | relative_url }}" alt="NAIA Cover Art" />
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Main Chayanne Frame -->
+      <a href="{{ '/es/about' | relative_url }}" class="frame-wrap main-frame">
+        <div class="frame" aria-label="Chayanne portrait">
+          <img src="{{ '/assets/chayanne.png' | relative_url }}" alt="Chayanne" />
+        </div>
+      </a>
+
+      <!-- Boturini Game Frame -->
+      <a href="{{ '/es/projects/el-tesoro-de-boturini/' | relative_url }}" class="frame-link">
+        <div class="frame-game" aria-label="El Tesoro de Boturini Game">
+          <div class="cartridge">
+            <div class="cartridge-top"></div>
+            <div class="cartridge-sticker">
+              <img src="{{ '/assets/boturini.png' | relative_url }}" alt="El Tesoro de Boturini Cover Art" />
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- ── Floor ── -->
+  <section class="floor">
+    <div class="floor-tiles" aria-hidden="true"></div>
+
+    <div class="floor-content">
+      <h2 class="wip-title">{{ i18n.home.social_heading }}</h2>
+
+      <div class="social-icon-links" style="display: flex; gap: 2rem; justify-content: center; margin-top: 2rem;">
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@tamal.rosita" target="_blank" rel="noopener noreferrer"
+          class="social-icon-link retro-btn" aria-label="TikTok"
+          style="padding: 0.8rem; display: flex; align-items: center; justify-content: center;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-music-2">
+            <circle cx="8" cy="18" r="4" />
+            <path d="M12 18V2l7 4" />
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/tamalrositagames/" target="_blank" rel="noopener noreferrer"
+          class="social-icon-link retro-btn" aria-label="Instagram"
+          style="padding: 0.8rem; display: flex; align-items: center; justify-content: center;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-instagram">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+          </svg>
+        </a>
+
+        <!-- itch.io -->
+        <a href="https://tamalrosita.itch.io" target="_blank" rel="noopener noreferrer"
+          class="social-icon-link retro-btn" aria-label="itch.io"
+          style="padding: 0.8rem; display: flex; align-items: center; justify-content: center;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-gamepad-2">
+            <line x1="6" x2="10" y1="11" y2="11" />
+            <line x1="8" x2="8" y1="9" y2="13" />
+            <line x1="15" x2="15.01" y1="12" y2="12" />
+            <line x1="18" x2="18.01" y1="10" y2="10" />
+            <path
+              d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    {% include footer.html %}
+  </section>
+
+</div>

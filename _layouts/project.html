@@ -2,10 +2,12 @@
 layout: default
 ---
 
-<div class="room proyect-room">
+{% assign i18n = site.data.i18n[page.lang] %}
+
+<div class="room project-room room-scroll">
 
   <!-- ── Wall ── -->
-  <section class="wall proyect-wall">
+  <section class="wall project-wall">
 
     <!-- Hanging lamps -->
     <div class="lamp lamp-left" aria-hidden="true">
@@ -20,9 +22,9 @@ layout: default
     </div>
 
     <!-- Project Hero -->
-    <div class="proyect-hero">
-      <div class="proyect-cover-wrap">
-        <div class="frame-game proyect-cover-frame" aria-label="{{ page.title }} Cover Art">
+    <div class="project-hero">
+      <div class="project-cover-wrap">
+        <div class="frame-game project-cover-frame" aria-label="{{ page.title }} Cover Art">
           <div class="cartridge">
             <div class="cartridge-top"></div>
             <div class="cartridge-sticker">
@@ -32,14 +34,14 @@ layout: default
         </div>
       </div>
 
-      <div class="proyect-info">
-        <h1 class="proyect-title">{{ page.title }}</h1>
+      <div class="project-info">
+        <h1 class="project-title">{{ page.title }}</h1>
         {% if page.tagline %}
-        <p class="proyect-tagline">{{ page.tagline }}</p>
+        <p class="project-tagline">{{ page.tagline }}</p>
         {% endif %}
         {% if page.link %}
-        <a href="{{ page.link }}" target="_blank" rel="noopener noreferrer" class="retro-btn proyect-play-btn">
-          Play on itch.io
+        <a href="{{ page.link }}" target="_blank" rel="noopener noreferrer" class="retro-btn project-play-btn">
+          {{ i18n.project.play_btn }}
         </a>
         {% endif %}
       </div>
@@ -48,17 +50,17 @@ layout: default
   </section>
 
   <!-- ── Floor ── -->
-  <section class="floor proyect-floor">
+  <section class="floor project-floor">
     <div class="floor-tiles" aria-hidden="true"></div>
 
-    <div class="floor-content proyect-content">
-      <div class="proyect-description">
+    <div class="floor-content project-content">
+      <div class="project-description">
         {{ content }}
       </div>
 
       {% if page.screenshots %}
-      <div class="proyect-screenshots">
-        <h2 class="wip-title">Screenshots</h2>
+      <div class="project-screenshots">
+        <h2 class="wip-title">{{ i18n.project.screenshots_heading }}</h2>
         <div class="screenshots-grid">
           {% for screenshot in page.screenshots %}
           <div class="screenshot-frame">
@@ -70,9 +72,11 @@ layout: default
       {% endif %}
 
       <div class="social-links">
-        <a href="{{ '/proyects' | relative_url }}" class="retro-btn">&larr; All Proyects</a>
+        <a href="{% if page.lang == 'es' %}{{ '/es/projects/' | relative_url }}{% else %}{{ '/projects/' | relative_url }}{% endif %}"
+          class="retro-btn">{{ i18n.project.back_btn }}</a>
         {% if page.link %}
-        <a href="{{ page.link }}" target="_blank" rel="noopener noreferrer" class="retro-btn">Play on itch.io</a>
+        <a href="{{ page.link }}" target="_blank" rel="noopener noreferrer" class="retro-btn">{{ i18n.project.play_btn
+          }}</a>
         {% endif %}
       </div>
     </div>

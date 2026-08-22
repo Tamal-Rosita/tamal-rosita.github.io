@@ -3,9 +3,12 @@ layout: default
 title: About
 description: "Meet Tamal Rosita — an indie game studio crafting pixel-art games with heart and soul."
 permalink: /about
+lang: en
 ---
 
-<div class="room about-room" id="room">
+{% assign i18n = site.data.i18n[page.lang] %}
+
+<div class="room about-room room-scroll" id="room">
 
   <!-- ── Wall ── -->
   <section class="wall about-wall">
@@ -24,7 +27,7 @@ permalink: /about
 
     <!-- About Header -->
     <header class="title-block" role="banner">
-      <h1 class="site-title">About<br>Us</h1>
+      <h1 class="site-title">{{ i18n.about.page_title | replace: " ", "<br>" }}</h1>
     </header>
 
     <!-- Studio Portrait -->
@@ -46,61 +49,70 @@ permalink: /about
 
       <!-- Studio Description -->
       <div class="about-section">
-        <h2 class="about-heading">Who We Are</h2>
+        <h2 class="about-heading">{{ i18n.about.who_heading }}</h2>
         <div class="about-card">
           <p class="about-text">
-            <strong>Tamal Rosita</strong> is an indie game studio born from a love of pixel art,
-            retro aesthetics, and stories that matter. We believe games are the ultimate form of
-            interactive storytelling — and we pour heart, culture, and craft into every pixel.
+            {{ i18n.about.who_text }}
           </p>
         </div>
       </div>
 
       <!-- Mission -->
       <div class="about-section">
-        <h2 class="about-heading">Our Mission</h2>
+        <h2 class="about-heading">{{ i18n.about.mission_heading }}</h2>
         <div class="about-card">
           <p class="about-text">
-            To create memorable gaming experiences that blend Mexican culture, nostalgia, and
-            modern game design. Every project we release is a love letter to the games and
-            stories that shaped us.
+            {{ i18n.about.mission_text }}
           </p>
         </div>
       </div>
 
       <!-- What We Do -->
       <div class="about-section">
-        <h2 class="about-heading">What We Do</h2>
+        <h2 class="about-heading">{{ i18n.about.skills_heading }}</h2>
         <div class="about-skills-grid">
           <div class="about-skill-card">
             <span class="about-skill-icon" aria-hidden="true">🎮</span>
-            <h3 class="about-skill-title">Game Dev</h3>
-            <p class="about-skill-desc">2D pixel-art games with rich narratives and retro mechanics.</p>
+            <h3 class="about-skill-title">{{ i18n.about.skill_gamedev_title }}</h3>
+            <p class="about-skill-desc">{{ i18n.about.skill_gamedev_desc }}</p>
           </div>
           <div class="about-skill-card">
             <span class="about-skill-icon" aria-hidden="true">🎨</span>
-            <h3 class="about-skill-title">Pixel Art</h3>
-            <p class="about-skill-desc">Hand-crafted sprites, tilesets, and animations with soul.</p>
+            <h3 class="about-skill-title">{{ i18n.about.skill_pixelart_title }}</h3>
+            <p class="about-skill-desc">{{ i18n.about.skill_pixelart_desc }}</p>
           </div>
           <div class="about-skill-card">
             <span class="about-skill-icon" aria-hidden="true">🎵</span>
-            <h3 class="about-skill-title">Chiptune</h3>
-            <p class="about-skill-desc">Original chiptune soundtracks that set the mood.</p>
+            <h3 class="about-skill-title">{{ i18n.about.skill_chiptune_title }}</h3>
+            <p class="about-skill-desc">{{ i18n.about.skill_chiptune_desc }}</p>
           </div>
           <div class="about-skill-card">
             <span class="about-skill-icon" aria-hidden="true">📖</span>
-            <h3 class="about-skill-title">Storytelling</h3>
-            <p class="about-skill-desc">Narratives rooted in culture, myth, and imagination.</p>
+            <h3 class="about-skill-title">{{ i18n.about.skill_story_title }}</h3>
+            <p class="about-skill-desc">{{ i18n.about.skill_story_desc }}</p>
           </div>
         </div>
       </div>
 
       <!-- Connect -->
       <div class="about-section">
-        <h2 class="about-heading">Connect With Us</h2>
-        <div class="social-links">
-          <a href="https://tamalrosita.itch.io" target="_blank" rel="noopener noreferrer" class="retro-btn">Our itch.io</a>
-          <a href="https://oxido.dev" target="_blank" rel="noopener noreferrer" class="retro-btn">Personal Site</a>
+        <h2 class="about-heading">{{ i18n.about.connect_heading }}</h2>
+        
+        <div class="social-icon-links" style="display: flex; gap: 2rem; justify-content: center; margin-top: 2rem;">
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@tamal.rosita" target="_blank" rel="noopener noreferrer" class="social-icon-link retro-btn" aria-label="TikTok" style="padding: 0.8rem; display: flex; align-items: center; justify-content: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-music-2"><circle cx="8" cy="18" r="4"/><path d="M12 18V2l7 4"/></svg>
+          </a>
+          
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/tamalrositagames/" target="_blank" rel="noopener noreferrer" class="social-icon-link retro-btn" aria-label="Instagram" style="padding: 0.8rem; display: flex; align-items: center; justify-content: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+  
+          <!-- itch.io -->
+          <a href="https://tamalrosita.itch.io" target="_blank" rel="noopener noreferrer" class="social-icon-link retro-btn" aria-label="itch.io" style="padding: 0.8rem; display: flex; align-items: center; justify-content: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gamepad-2"><line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg>
+          </a>
         </div>
       </div>
 

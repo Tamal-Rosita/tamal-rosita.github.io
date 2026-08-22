@@ -1,6 +1,7 @@
 <nav class="retro-nav" id="mainNav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="{{ '/' | relative_url }}" class="nav-logo" aria-label="Tamal Rosita Home">
+    <a href="{{ site.data.i18n[page.lang].nav.lang_switch_url | replace: '/es/', '/' | relative_url }}" class="nav-logo"
+      aria-label="Tamal Rosita Home">
       <span class="nav-logo-text">TR</span>
     </a>
 
@@ -12,16 +13,37 @@
 
     <ul class="nav-links" id="navLinks">
       <li>
-        <a href="{{ '/' | relative_url }}"
-           class="nav-link{% if page.url == '/' %} nav-active{% endif %}">Home</a>
+        <a href="{% if page.lang == 'es' %}{{ '/es/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}"
+          class="nav-link{% if page.url == '/' or page.url == '/es/' %} nav-active{% endif %}">
+          {{ site.data.i18n[page.lang].nav.home }}
+        </a>
       </li>
       <li>
-        <a href="{{ '/about' | relative_url }}"
-           class="nav-link{% if page.url == '/about' or page.url == '/about.html' %} nav-active{% endif %}">About</a>
+        <a href="{% if page.lang == 'es' %}{{ '/es/about' | relative_url }}{% else %}{{ '/about' | relative_url }}{% endif %}"
+          class="nav-link{% if page.url contains '/about' %} nav-active{% endif %}">
+          {{ site.data.i18n[page.lang].nav.about }}
+        </a>
       </li>
       <li>
-        <a href="{{ '/proyects' | relative_url }}"
-           class="nav-link{% if page.url contains '/proyects' %} nav-active{% endif %}">Proyects</a>
+        <a href="{% if page.lang == 'es' %}{{ '/es/projects/' | relative_url }}{% else %}{{ '/projects/' | relative_url }}{% endif %}"
+          class="nav-link{% if page.url contains '/projects' %} nav-active{% endif %}">
+          {{ site.data.i18n[page.lang].nav.projects }}
+        </a>
+      </li>
+      <li class="lang-switch-li">
+        {% if page.lang == 'es' %}
+          {% assign lang_url = page.url | remove_first: '/es' %}
+          {% if lang_url == '' %}{% assign lang_url = '/' %}{% endif %}
+        {% else %}
+          {% if page.url == '/' %}
+            {% assign lang_url = '/es/' %}
+          {% else %}
+            {% assign lang_url = '/es' | append: page.url %}
+          {% endif %}
+        {% endif %}
+        <a href="{{ lang_url | relative_url }}" class="nav-link lang-switch">
+          {{ site.data.i18n[page.lang].nav.lang_label }}
+        </a>
       </li>
     </ul>
   </div>

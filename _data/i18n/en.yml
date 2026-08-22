@@ -1,0 +1,61 @@
+# ═══════════════════════════════════════
+# English UI Strings & Content
+# ═══════════════════════════════════════
+
+# Navigation
+nav:
+  home: "Home"
+  about: "About"
+  projects: "Projects"
+  lang_label: "ES"
+  lang_switch_url: "/es/"
+
+# Home page
+home:
+  title: "Tamal Rosita"
+  description: "Tamal Rosita — experimental indie game studio crafting unique adventures with heart and soul."
+  social_heading: "Find Us"
+
+# About page
+about:
+  title: "About"
+  description: "Meet Tamal Rosita — an experimental indie game studio crafting experiences with heart and soul."
+  page_title: "About Us"
+  who_heading: "Who We Are"
+  who_text: "<strong>Tamal Rosita</strong> is an experimental indie game studio born from a love of storytelling, immersive worlds, and unique mechanics. We believe games are the ultimate form of interactive art — and we pour heart, culture, and craft into every project."
+  mission_heading: "Our Mission"
+  mission_text: "To create memorable and boundary-pushing gaming experiences. From retro 2D pixel-art to immersive 3D worlds with dynamic combat, every project we release is a love letter to the games and stories that shaped us."
+  skills_heading: "What We Do"
+  skill_gamedev_title: "Game Dev"
+  skill_gamedev_desc: "2D and 3D games with rich narratives, from retro mechanics to immersive combat."
+  skill_pixelart_title: "Visual Arts"
+  skill_pixelart_desc: "Hand-crafted pixel art sprites and evocative 3D environments with soul."
+  skill_chiptune_title: "Audio Design"
+  skill_chiptune_desc: "Original soundtracks, from nostalgic chiptunes to immersive 3D soundscapes."
+  skill_story_title: "Storytelling"
+  skill_story_desc: "Narratives rooted in culture, myth, and imagination."
+  connect_heading: "Connect With Us"
+
+# Projects page
+projects:
+  title: "Projects"
+  description: "Explore the games and projects crafted by Tamal Rosita — indie pixel-art adventures."
+  page_title: "Our Games"
+  collection_heading: "Game Collection"
+  collection_subtitle: "Click a cartridge to learn more!"
+  all_games_btn: "All Games on itch.io"
+
+# Project detail
+project:
+  play_btn: "Play on itch.io"
+  back_btn: "← All Projects"
+  screenshots_heading: "Screenshots"
+
+# Social links
+social:
+  itchio: "Our itch.io"
+  personal: "Personal Site"
+
+# Footer
+footer:
+  copyright: "Tamal Rosita"

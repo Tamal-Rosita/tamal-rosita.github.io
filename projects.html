@@ -1,0 +1,77 @@
+---
+layout: default
+title: Projects
+description: "Explore the games and projects crafted by Tamal Rosita — indie pixel-art adventures."
+permalink: /projects/
+lang: en
+---
+
+{% assign i18n = site.data.i18n[page.lang] %}
+
+<div class="room projects-room room-scroll" id="room">
+
+  <!-- ── Wall ── -->
+  <section class="wall projects-wall">
+
+    <!-- Hanging lamps -->
+    <div class="lamp lamp-left" aria-hidden="true">
+      <div class="lamp-cord"></div>
+      <div class="lamp-shade"></div>
+      <div class="lamp-bulb"></div>
+    </div>
+    <div class="lamp lamp-right" aria-hidden="true">
+      <div class="lamp-cord"></div>
+      <div class="lamp-shade"></div>
+      <div class="lamp-bulb"></div>
+    </div>
+
+    <!-- Title -->
+    <header class="title-block" role="banner">
+      <h1 class="site-title">{{ i18n.projects.page_title | replace: " ", "<br>" }}</h1>
+    </header>
+
+  </section>
+
+  <!-- ── Floor ── -->
+  <section class="floor projects-floor">
+    <div class="floor-tiles" aria-hidden="true"></div>
+
+    <div class="floor-content projects-content">
+
+      <h2 class="wip-title">{{ i18n.projects.collection_heading }}</h2>
+      <p class="wip-subtitle">{{ i18n.projects.collection_subtitle }}</p>
+
+      <div class="projects-grid">
+        {% assign lang_projects = site.projects | where: "lang", page.lang %}
+        {% for project in lang_projects %}
+        <a href="{{ project.url | relative_url }}" class="project-card-link">
+          <div class="project-card">
+            <div class="frame-game" aria-label="{{ project.title }}">
+              <div class="cartridge">
+                <div class="cartridge-top"></div>
+                <div class="cartridge-sticker">
+                  <img src="{{ project.cover | relative_url }}" alt="{{ project.title }} Cover Art" />
+                </div>
+              </div>
+            </div>
+            <div class="project-card-info">
+              <h3 class="project-card-title">{{ project.title }}</h3>
+              <p class="project-card-desc">{{ project.description }}</p>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+
+      <div class="social-links">
+        <a href="https://tamalrosita.itch.io" target="_blank" rel="noopener noreferrer" class="retro-btn">
+          {{ i18n.projects.all_games_btn }}
+        </a>
+      </div>
+
+    </div>
+
+    {% include footer.html %}
+  </section>
+
+</div>

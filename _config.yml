@@ -4,9 +4,9 @@ url: "https://tamalrosita.com"
 baseurl: ""
 
 collections:
-  proyects:
+  projects:
     output: true
-    permalink: /proyects/:slug/
+    permalink: /projects/:slug/
 
 google_analytics: "G-JF510QX21V"
 
