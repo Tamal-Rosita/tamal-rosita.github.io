@@ -29,39 +29,8 @@ lang: en
       <h1 class="site-title">Tamal<br>Rosita</h1>
     </header>
 
-    <!-- Chayanne frame and Games -->
-    <div class="gallery">
-      <!-- NAIA Game Frame -->
-      <a href="{{ '/projects/naia/' | relative_url }}" class="frame-link">
-        <div class="frame-game" aria-label="NAIA Game">
-          <div class="cartridge">
-            <div class="cartridge-top"></div>
-            <div class="cartridge-sticker">
-              <img src="{{ '/assets/naia.png' | relative_url }}" alt="NAIA Cover Art" />
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <!-- Main Chayanne Frame -->
-      <a href="{{ '/about/' | relative_url }}" class="frame-wrap main-frame">
-        <div class="frame" aria-label="Chayanne portrait">
-          <img src="{{ '/assets/chayanne.png' | relative_url }}" alt="Chayanne" />
-        </div>
-      </a>
-
-      <!-- Boturini Game Frame -->
-      <a href="{{ '/projects/el-tesoro-de-boturini/' | relative_url }}" class="frame-link">
-        <div class="frame-game" aria-label="El Tesoro de Boturini Game">
-          <div class="cartridge">
-            <div class="cartridge-top"></div>
-            <div class="cartridge-sticker">
-              <img src="{{ '/assets/boturini.png' | relative_url }}" alt="El Tesoro de Boturini Cover Art" />
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
+    <!-- Categories -->
+    {% include home_categories.html %}
 
   </section>
 

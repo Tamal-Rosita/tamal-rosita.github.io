@@ -4,6 +4,7 @@ title: NAIA
 cover: /assets/naia.png
 link: https://tamalrosita.itch.io/naia
 lang: en
+console: gameboy
 description: "A prehistoric adventure in the Yucatan peninsula made in GB Studio."
 tagline: "A prehistoric adventure in the Yucatan peninsula"
 ---

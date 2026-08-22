@@ -1,0 +1,16 @@
+<!-- Categories -->
+<div class="gallery gallery-categories">
+  <!-- Gameboy Category -->
+  <a href="{% if page.lang == 'es' %}{{ '/es/projects/#gameboy' | relative_url }}{% else %}{{ '/projects/#gameboy' | relative_url }}{% endif %}" class="frame-link">
+    <div class="frame-game console-icon" aria-label="Gameboy Games">
+      <img src="{{ '/assets/console-gameboy.png' | relative_url }}" alt="Gameboy Games" />
+    </div>
+  </a>
+
+  <!-- Godot Category -->
+  <a href="{% if page.lang == 'es' %}{{ '/es/projects/#godot' | relative_url }}{% else %}{{ '/projects/#godot' | relative_url }}{% endif %}" class="frame-link">
+    <div class="frame-game console-icon" aria-label="Godot Games">
+      <img src="{{ '/assets/godot-icon.png' | relative_url }}" alt="Godot Games" />
+    </div>
+  </a>
+</div>

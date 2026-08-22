@@ -2,6 +2,7 @@
 layout: project
 title: El Tesoro de Boturini
 cover: /assets/boturini.png
+console: gameboy
 link: https://tamalrosita.itch.io/el-tesoro-de-boturini
 lang: es
 permalink: /es/projects/el-tesoro-de-boturini/

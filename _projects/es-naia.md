@@ -7,6 +7,7 @@ lang: es
 permalink: /es/projects/naia/
 description: "Aventura prehistorica en la peninsula de Yucatan hecha en GB Studio."
 tagline: "Aventura prehistorica en la peninsula de Yucatan"
+console: gameboy
 ---
 
 **NAIA** es una aventura del Pleistoceno superior en la peninsula de Yucatan, hecha en GB Studio para la Mini Game Work Jam 2026: Conservación del Patrimonio Subacuatico, INAH.

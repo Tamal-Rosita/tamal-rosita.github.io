@@ -2,6 +2,7 @@
 layout: project
 title: El Tesoro de Boturini
 cover: /assets/boturini.png
+console: gameboy
 link: https://tamalrosita.itch.io/el-tesoro-de-boturini
 lang: en
 description: "A graphic adventure made in GB Studio for the Mini Game Work Jam 2025: Conservation of Documentary Heritage"
