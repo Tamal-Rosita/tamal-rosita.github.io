@@ -49,3 +49,29 @@
     {% endfor %}
   </div>
 </div>
+
+<!-- VRM Projects -->
+<div class="projects-category" id="vrm">
+  <h3 class="category-title" style="text-align:center; color: var(--text-title); margin-top: 2rem;">VRM Novel Engine</h3>
+  <div class="projects-grid">
+    {% assign vrm_projects = site.projects | where: "lang", page.lang | where: "category", "vrm" %}
+    {% for project in vrm_projects %}
+    <a href="{{ project.url | relative_url }}" class="project-card-link">
+      <div class="project-card">
+        <div class="frame-game" aria-label="{{ project.title }}">
+          <div class="cartridge cartridge-{{ project.console }}">
+            <div class="cartridge-top"></div>
+            <div class="cartridge-sticker">
+              <img src="{{ project.cover | relative_url }}" alt="{{ project.title }} Cover Art" />
+            </div>
+          </div>
+        </div>
+        <div class="project-card-info">
+          <h3 class="project-card-title">{{ project.title }}</h3>
+          <p class="project-card-desc">{{ project.description }}</p>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
