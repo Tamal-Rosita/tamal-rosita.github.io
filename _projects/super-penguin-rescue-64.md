@@ -7,23 +7,19 @@ console: n64
 category: godot
 link: https://tamalrosita.itch.io/super-penguin-rescue-64
 lang: en
+tagline: "A pixel-perfect mini-game about saving baby penguins!"
 ---
 
-## Story
-Evil Mario threw some **slippery baby penguins off a cliff**!!!
-Help our hero rescue those poor babies from death...
+**Super Penguin Rescue 64** - Evil Mario threw some slippery baby penguins off a cliff!!! Help our hero rescue those poor babies from death...
 
-## Instructions
+### Instructions
 1. Use A and D or arrows to move and catch as many penguins as you can!
 
-Tested on **Firefox** <3
-**Note: This game won't work on Safari browser.**
+*Tested on Firefox. Note: This game won't work on Safari browser.*
 
-## Credits
-*Lakitu* [SM 64] - free 3D model by Hasksoft.
-*Penguin* - free 3D model by alec pike.
+### Credits
+- **Lakitu** [SM 64] - free 3D model by Hasksoft.
+- **Penguin** - free 3D model by alec pike.
+- **Repository**: [GitHub](https://github.com/Tamal-Rosita/Super-Penguin-Rescue-64)
 
-**Made with Godot.**
-**I do not own the rights of any of media content.**
-
-Repository: [GitHub](https://github.com/Tamal-Rosita/Super-Penguin-Rescue-64)
+*Made with Godot. I do not own the rights of any of media content.*
