@@ -159,10 +159,8 @@ body {
   inset: 0;
   --checker-size: clamp(20px, 3.5vw, 40px);
   background-image:
-    repeating-conic-gradient(
-      var(--wall-checker-1) 0% 25%,
-      var(--wall-checker-2) 0% 50%
-    );
+    repeating-conic-gradient(var(--wall-checker-1) 0% 25%,
+      var(--wall-checker-2) 0% 50%);
   background-size: calc(var(--checker-size) * 2) calc(var(--checker-size) * 2);
   pointer-events: none;
   transition: background 0.5s;
@@ -225,9 +223,12 @@ body {
 }
 
 @keyframes bulbPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 12px 6px rgba(255, 230, 100, 0.5);
   }
+
   50% {
     box-shadow: 0 0 20px 12px rgba(255, 230, 100, 0.8);
   }
@@ -242,7 +243,7 @@ body {
 
 .site-title {
   font-family: 'Press Start 2P', monospace;
-  font-size: clamp(1.5rem, 8vw, 7rem);
+  font-size: clamp(2rem, 8vw, 5rem);
   line-height: 0.85;
   letter-spacing: 0.02em;
   font-weight: normal;
@@ -306,9 +307,11 @@ body {
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   margin: 0 1.5rem;
 }
+
 .gallery-categories .frame-link:hover {
   transform: scale(1.15) translateY(-10px);
 }
+
 .gallery-categories .console-icon {
   width: clamp(220px, 40vw, 320px);
   height: clamp(220px, 40vw, 320px);
@@ -317,6 +320,7 @@ body {
   border: none;
   box-shadow: none;
 }
+
 .gallery-categories .console-icon img {
   width: 100%;
   height: 100%;
@@ -456,8 +460,9 @@ body {
   left: 50%;
   transform: translateX(-50%);
   border: 3px solid #222;
-  box-shadow: inset -4px -4px 0 rgba(0,0,0,0.5), inset 4px 4px 0 rgba(255,255,255,0.15);
+  box-shadow: inset -4px -4px 0 rgba(0, 0, 0, 0.5), inset 4px 4px 0 rgba(255, 255, 255, 0.15);
 }
+
 .cartridge-n64::before,
 .cartridge-n64::after {
   content: '';
@@ -469,8 +474,14 @@ body {
   background: #2a2a2a;
   border-radius: 4px;
 }
-.cartridge-n64::before { left: -3%; }
-.cartridge-n64::after { right: -3%; }
+
+.cartridge-n64::before {
+  left: -3%;
+}
+
+.cartridge-n64::after {
+  right: -3%;
+}
 
 .cartridge-n64 .cartridge-top {
   border-radius: 40% 40% 0 0 / 100% 100% 0 0;
@@ -478,8 +489,9 @@ body {
   width: 80%;
   margin: -6% auto 0;
   background: #222;
-  box-shadow: inset 0 -2px 0 rgba(255,255,255,0.1);
+  box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.1);
 }
+
 .cartridge-n64 .cartridge-sticker {
   height: 52%;
   width: 72%;
@@ -501,8 +513,9 @@ body {
   left: 50%;
   transform: translateX(-50%);
   border: 4px solid #4a423a;
-  box-shadow: inset -4px -4px 0 rgba(0,0,0,0.2), inset 4px 4px 0 rgba(255,255,255,0.4);
+  box-shadow: inset -4px -4px 0 rgba(0, 0, 0, 0.2), inset 4px 4px 0 rgba(255, 255, 255, 0.4);
 }
+
 .cartridge-tv::before {
   content: '';
   position: absolute;
@@ -514,9 +527,11 @@ body {
   background: #4a423a;
   box-shadow: 0 20px 0 #4a423a;
 }
+
 .cartridge-tv .cartridge-top {
   display: none;
 }
+
 .cartridge-tv .cartridge-sticker {
   height: 60%;
   width: 65%;
@@ -532,6 +547,7 @@ body {
   background: #c3c3c3;
   border-radius: 4px 4px 0 0;
 }
+
 .cartridge-gameboy .cartridge-top {
   border-radius: 4px;
 }
@@ -769,9 +785,9 @@ body {
     padding-bottom: 2rem;
   }
 
-  /* On very small screens, scale title down more aggressively */
+  /* On very small screens, scale title down appropriately */
   .site-title {
-    font-size: clamp(5rem, 12vw, 9rem);
+    font-size: clamp(3rem, 10vw, 8rem);
   }
 
   .wip-title {
@@ -792,7 +808,7 @@ body {
   }
 
   .site-title {
-    font-size: clamp(1.2rem, 5vw, 3rem);
+    font-size: clamp(2rem, 8vw, 5rem);
   }
 
   .lamp {
@@ -1009,6 +1025,13 @@ body {
 .about-skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+/* Team grid — 2 columns */
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 
@@ -1304,6 +1327,7 @@ body {
    RESPONSIVE — Nav + new pages
 ══════════════════════════════════════════════ */
 @media (max-width: 600px) {
+
   /* Mobile nav — fixed tap target issues */
   .nav-toggle {
     display: flex;
@@ -1417,7 +1441,9 @@ body {
 }
 
 @media (max-width: 400px) {
-  .about-skills-grid {
+
+  .about-skills-grid,
+  .about-team-grid {
     grid-template-columns: 1fr;
   }
 

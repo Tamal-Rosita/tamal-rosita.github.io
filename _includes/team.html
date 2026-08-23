@@ -4,7 +4,7 @@
   {% else %}
   <h2 class="about-heading">Meet the Team</h2>
   {% endif %}
-  <div class="about-skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+  <div class="about-team-grid">
     {% for member in site.data.team %}
     <a href="{{ member.url }}" target="_blank" rel="noopener noreferrer" class="about-skill-card retro-btn" style="text-decoration: none;">
       <h3 class="about-skill-title" style="margin-bottom: 0;">{{ member.name }}</h3>
